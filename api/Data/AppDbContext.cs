@@ -14,6 +14,6 @@ namespace api.Data
 
         }
 
-        public DbSet <Task> Tasks { get; set;}
+        public DbSet <Tasks> Task { get; set;}
     }
 }

@@ -6,6 +6,7 @@ using api.Data;
 using Microsoft.AspNetCore.Mvc;
 using SQLitePCL;
 using Microsoft.EntityFrameworkCore;
+using api.models;
 namespace api.controllers
 {
     [ApiController]
@@ -19,8 +20,8 @@ namespace api.controllers
         }
         
          [HttpGet]
-        public async Task<IEnumerable<Task>> getTask(){
-            var task = await _context.Tasks.AsNoTracking().ToListAsync();
+        public async Task<IEnumerable<Tasks>> getTask(){
+            var task = await _context.Task.AsNoTracking().ToListAsync();
             return task;
         }
 
